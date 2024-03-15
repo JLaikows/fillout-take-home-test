@@ -71,6 +71,7 @@ const getFilteredResponses = async (
 ) => {
   const { filters: rawFilters, limit, offset, ...rawQueries } = query;
 
+  //uses default values if limit or offset is undefined
   const parsedLimit = Number(limit) || 150;
   const parsedOffset = Number(offset) || 0;
 
